@@ -1,0 +1,1 @@
+all: apue.o
