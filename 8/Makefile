@@ -1,5 +1,11 @@
 CFLAGS = -I..
+LDFLAGS = ../apue.o
 
-all: 8-1
+EXEC = 8-1 8-4
 
-8-1: ../apue.o
+all: $(EXEC)
+
+8-4: 8-3.o
+
+clean:
+	-rm $(EXEC) *.o
