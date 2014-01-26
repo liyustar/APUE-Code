@@ -10,8 +10,10 @@
 #include <stdlib.h>		/* for convenience */
 #include <string.h>		/* for convenience */
 #include <unistd.h>		/* for convenience */
+#include <signal.h>
 #define MAXLINE 4096			/* max line length */
 
+typedef void Sigfunc(int);
 
 void	err_dump(const char *, ...);
 void	err_msg(const char *, ...);

@@ -34,6 +34,22 @@ err_sys(const char *fmt, ...)
 }
 
 /*
+ * Fatal error related to a system call.
+ * Print a message, dump core, and terminate.
+ */
+void
+err_dump(const char *fmt, ...)
+{
+	va_list	ap;
+	
+	va_start(ap, fmt);
+	err_doit(1, errno, fmt, ap);
+	va_end(ap);
+	abort();	/* dump core and terminate */
+	exit(1);	/* shouldn't get here */
+}
+
+/*
  * Fatal error unrelated to a system call.
  * Print a message and terminate.
  */
