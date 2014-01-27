@@ -1,7 +1,7 @@
 CFLAGS = -I..
 LDFLAGS = ../apue.o
 
-EXEC = 10-1 10-2 10-3 10-6
+EXEC = 10-1 10-2 10-3 10-6 10-7
 
 all: $(EXEC)
 
