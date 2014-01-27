@@ -10,7 +10,6 @@ int main()
 		err_sys("signal(SIGALRM) error");
 
 	alarm(10);
-	sleep(1);
 	if ((n = read(STDIN_FILENO, line, MAXLINE)) < 0)
 		err_sys("read error");
 	alarm(0);
@@ -23,4 +22,5 @@ static void
 sig_alrm(int signo)
 {
 	/* nothing to do, just return to interrupt the read */
+	printf("SIGALRM received\n");
 }
