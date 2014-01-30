@@ -1,7 +1,7 @@
 CFLAGS = -I..
 LDFLAGS = ../apue.o -lpthread
 
-EXEC = 11-1
+EXEC = 11-1 11-2
 
 all: $(EXEC)
 
